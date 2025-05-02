@@ -64,6 +64,69 @@ function initCart() {
     if (overlay) {
         overlay.addEventListener('click', closeCart);
     }
+
+    // Add search functionality
+    const searchIcon = document.querySelector('.search-icon');
+    const searchInput = document.getElementById('cart-search-input');
+    const searchBtn = document.getElementById('cart-search-btn');
+    
+    if (searchIcon) {
+        searchIcon.addEventListener('click', function() {
+            cartSidebar.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            searchInput.focus();
+        });
+    }
+    
+    if (searchBtn && searchInput) {
+        searchBtn.addEventListener('click', function() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const filteredItems = cart.items.filter(item => 
+                item.name.toLowerCase().includes(searchTerm)
+            );
+            updateCartDisplay(filteredItems);
+        });
+
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchBtn.click();
+            }
+        });
+    }
+
+    function updateCartDisplay(items) {
+        const cartItemsContainer = document.querySelector('.cart-items');
+        
+        if (cartItemsContainer) {
+            cartItemsContainer.innerHTML = '';
+            
+            if (items.length === 0) {
+                cartItemsContainer.innerHTML = '<p class="empty-cart">No matching items found</p>';
+            } else {
+                items.forEach(item => {
+                    const cartItemElement = document.createElement('div');
+                    cartItemElement.classList.add('cart-item');
+                    
+                    cartItemElement.innerHTML = `
+                        <img src="${item.image}" alt="${item.name}" class="cart-item-img">
+                        <div class="cart-item-details">
+                            <h3 class="cart-item-title">${item.name}</h3>
+                            <p class="cart-item-price">$${item.price.toFixed(2)}</p>
+                            <div class="cart-item-quantity">
+                                <button class="quantity-btn decrease" data-id="${item.id}">-</button>
+                                <span>${item.quantity}</span>
+                                <button class="quantity-btn increase" data-id="${item.id}">+</button>
+                            </div>
+                            <p class="remove-item" data-id="${item.id}">Remove</p>
+                        </div>
+                    `;
+                    
+                    cartItemsContainer.appendChild(cartItemElement);
+                });
+            }
+        }
+    }
     
     // Checkout button
     if (checkoutBtn) {
