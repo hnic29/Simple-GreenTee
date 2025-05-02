@@ -310,6 +310,10 @@ function loadProducts() {
     const productsGrid = document.querySelector('.products-grid');
     
     if (productsGrid) {
+        // Clear existing products
+        productsGrid.innerHTML = '';
+        
+        // Load products from the products array
         products.forEach(product => {
             const productCard = document.createElement('div');
             productCard.classList.add('product-card');
@@ -320,18 +324,14 @@ function loadProducts() {
             productCard.innerHTML = `
                 <div class="product-img">
                     <img src="${product.image}" alt="${product.name}">
+                    ${product.rating >= 4.7 ? '<div class="product-badge">Best Seller</div>' : ''}
                 </div>
                 <div class="product-info">
-                    <p class="product-category">${product.category}</p>
                     <h3 class="product-title">${product.name}</h3>
+                    <p class="product-description">${product.description}</p>
                     <p class="product-price">$${product.price.toFixed(2)}</p>
-                    <div class="product-rating">
-                        <div class="stars">${stars}</div>
-                        <span class="rating-count">(${product.ratingCount})</span>
-                    </div>
                     <div class="product-actions">
                         <button class="btn primary-btn add-to-cart" data-id="${product.id}">Add to Cart</button>
-                        <button class="btn text-btn quick-view" data-id="${product.id}">Quick View</button>
                     </div>
                 </div>
             `;
