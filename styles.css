@@ -60,6 +60,7 @@ body {
     line-height: 1.6;
     background-color: var(--white);
     overflow-x: hidden;
+    padding-top: 80px; /* Account for fixed header */
 }
 
 img {
@@ -472,16 +473,17 @@ header .container {
 
 /* ===== Hero Section ===== */
 .hero {
-    height: 100vh;
-    min-height: 600px;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    height: calc(100vh - 80px);
+    min-height: 500px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-image.png');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     color: var(--white);
     margin-top: 0;
-    padding-top: 80px;
+    padding-top: 0;
 }
 
 .hero-content {
