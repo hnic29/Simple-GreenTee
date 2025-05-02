@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenTee - About</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>GreenTee</h1>
+                <p class="tagline">Premium Golf Accessories</p>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-total">
+            <p>Total: <span>$0.00</span></p>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+    <div class="overlay"></div>
+
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1580493113011-ad79f792a7c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="About GreenTee">
+                </div>
+                <div class="about-text">
+                    <div class="section-header">
+                        <h2>About GreenTee</h2>
+                        <p>Committed to excellence in golf accessories</p>
+                    </div>
+                    <div class="about-details">
+                        <div class="about-values">
+                            <h3>Our Values</h3>
+                            <ul>
+                                <li><strong>Quality:</strong> We use only the finest materials and craftsmanship</li>
+                                <li><strong>Innovation:</strong> Constantly developing new technologies to improve your game</li>
+                                <li><strong>Sustainability:</strong> Eco-friendly practices in all our operations</li>
+                                <li><strong>Customer Focus:</strong> Dedicated to providing exceptional service</li>
+                            </ul>
+                        </div>
+                        <div class="about-history">
+                            <h3>Our History</h3>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-year">2015</div>
+                                    <div class="timeline-content">
+                                        <h4>Company Founded</h4>
+                                        <p>Started by professional golfers with a vision for premium accessories</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-year">2017</div>
+                                    <div class="timeline-content">
+                                        <h4>First Product Line</h4>
+                                        <p>Launched our initial collection of golf bags and gloves</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-year">2020</div>
+                                    <div class="timeline-content">
+                                        <h4>International Expansion</h4>
+                                        <p>Began shipping to over 50 countries worldwide</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-year">2023</div>
+                                    <div class="timeline-content">
+                                        <h4>Innovation Award</h4>
+                                        <p>Received the Golf Digest Editor's Choice Award</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="products.html" class="btn secondary-btn">Explore Our Products</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

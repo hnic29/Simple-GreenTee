@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenTee - Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>GreenTee</h1>
+                <p class="tagline">Premium Golf Accessories</p>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-total">
+            <p>Total: <span>$0.00</span></p>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+    <div class="overlay"></div>
+
+    <section class="featured-products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Products</h2>
+                <p>Explore our premium golf accessories</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/golf-bag-1.jpg" alt="Pro Series Golf Bag">
+                        <div class="product-badge">New</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Pro Series Golf Bag</h3>
+                        <p class="product-description">Lightweight, durable, and packed with features for the modern golfer</p>
+                        <div class="product-price">$249.99</div>
+                        <button class="btn primary-btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1611591437283-1a49f7a3b0d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Tour Pro Golf Bag">
+                        <div class="product-badge">Best Seller</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Tour Pro Golf Bag</h3>
+                        <p class="product-description">14-way divider with waterproof pockets and cooler compartment</p>
+                        <div class="product-price">$299.99</div>
+                        <button class="btn primary-btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1580493113011-ad79f792a7c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Stand Bag Pro">
+                    </div>
+                    <div class="product-info">
+                        <h3>Stand Bag Pro</h3>
+                        <p class="product-description">Lightweight stand bag with 5-way top and 7 pockets</p>
+                        <div class="product-price">$279.99</div>
+                        <button class="btn primary-btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/golf-gloves-1.jpg" alt="Tour Glove Pack">
+                        <div class="product-badge">Best Seller</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Tour Glove Pack</h3>
+                        <p class="product-description">Set of 3 premium leather gloves for ultimate grip and comfort</p>
+                        <div class="product-price">$59.99</div>
+                        <button class="btn primary-btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/golf-bag-2.jpg" alt="Performance Cart Bag">
+                    </div>
+                    <div class="product-info">
+                        <h3>Performance Cart Bag</h3>
+                        <p class="product-description">14-way divider, 10 pockets, and premium materials</p>
+                        <div class="product-price">$299.99</div>
+                        <button class="btn primary-btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/golf-gloves-2.jpg" alt="All-Weather Glove">
+                    </div>
+                    <div class="product-info">
+                        <h3>All-Weather Glove</h3>
+                        <p class="product-description">Water-resistant and breathable for all conditions</p>
+                        <div class="product-price">$34.99</div>
+                        <button class="btn primary-btn add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
