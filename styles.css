@@ -7,6 +7,8 @@
 :root {
     /* Color Variables */
     --primary-color: #2E8B57;      /* Forest Green */
+    --black-text: #000000;         /* Black */
+    --green-text: #2E8B57;         /* Green */
     --primary-dark: #1F5F3C;       /* Darker Green */
     --primary-light: #3CB371;      /* Lighter Green */
     --accent-color: #D4AF37;       /* Gold */
@@ -220,6 +222,17 @@ header .container {
 .logo h1 {
     font-size: 1.8rem;
     margin-bottom: 0;
+}
+
+.logo h1 .black {
+    color: var(--black-text);
+}
+
+.logo h1 .card {
+    color: var(--primary-color);
+}
+
+.logo h1 .golf {
     color: var(--primary-color);
 }
 
